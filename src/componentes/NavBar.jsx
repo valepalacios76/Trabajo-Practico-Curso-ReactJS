@@ -1,4 +1,5 @@
 import CartWidget from "./CartWidget"
+import {NavLink} from "react-router-dom"
 
 function NavBar(props) {
     if (props.isHeader == true) {
@@ -7,10 +8,10 @@ function NavBar(props) {
                 <nav>
                     <ul className="nav">
                         <a href="#"><img src="/logo.PNG" alt="Imagen del logo de la empresa" /></a>
-                        <li><a href="#"></a>HOME</li>
-                        <li><a href="#"></a>TIENDA</li>
-                        <li><a href="#"></a>SOBRE NOSOTROS</li>
-                        <li><a href="#"></a>CONTACTO</li>
+                        <NavLink to="/">INICIO</NavLink>
+                        <NavLink to="/categoria/beauty">MAQUILLAKE</NavLink>
+                        <NavLink to="/categoria/fragrances">PERFUMES</NavLink>
+                        <NavLink to="/categoria/furniture">DECO</NavLink>
                         <li><CartWidget /></li>
                     </ul> 
                 </nav>
@@ -21,10 +22,6 @@ function NavBar(props) {
             <>
                 <nav>
                     <ul className="nav">
-                        <li><a href="#"></a>PREGUNTAS FRECUENTES</li>
-                        <li><a href="#"></a>TRABAJÁ CON NOSOTROS</li>
-                        <li><a href="#"></a>TÉRMINOS Y CONDICIONES</li>
-                        <li><a href="#"></a>CONTACTO</li>
                     </ul> 
                 </nav>
             </> 
